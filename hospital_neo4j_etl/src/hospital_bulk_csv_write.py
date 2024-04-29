@@ -37,9 +37,7 @@ def load_hospital_graph_from_csv() -> None:
     """Load structured hospital CSV data following
     a specific ontology into Neo4j"""
 
-    driver = GraphDatabase.driver(
-        NEO4J_URI, auth=(NEO4J_USERNAME, NEO4J_PASSWORD)
-    )
+    driver = GraphDatabase.driver(NEO4J_URI, auth=(NEO4J_USERNAME, NEO4J_PASSWORD))
 
     LOGGER.info("Setting uniqueness constraints on nodes")
     with driver.session(database="neo4j") as session:
@@ -50,7 +48,7 @@ def load_hospital_graph_from_csv() -> None:
     with driver.session(database="neo4j") as session:
         query = f"""
         LOAD CSV WITH HEADERS
-        FROM '{HOSPITALS_CSV_PATH}' AS hospitals
+        FROM '{HOSPITALS_CSV_PATH}' AS hospitals with hospitals where hospitals.id is not null
         MERGE (h:Hospital {{id: toInteger(hospitals.hospital_id),
                             name: hospitals.hospital_name,
                             state_name: hospitals.hospital_state}});
