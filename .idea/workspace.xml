@@ -5,14 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="72833f4c-c0d6-4b12-b0fe-7430fa15e87b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hospital_neo4j_etl/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hospital_neo4j_etl/pyproject.toml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hospital_neo4j_etl/src/entrypoint.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hospital_neo4j_etl/src/hospital_bulk_csv_write.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/hospitals.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/hospitals.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
